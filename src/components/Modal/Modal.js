@@ -9,8 +9,6 @@ export default function Modal({children,handleClose, isSalesModal}) {
                 borderColor: isSalesModal ? 'rgba(255, 69, 0,0.4)' : '#555',
             }}>
                 {children}
-                <br />
-                <button onClick={handleClose} className={isSalesModal ? 'sales-btn': ''}>Close</button>
             </div>
         </div>
     ), document.body )

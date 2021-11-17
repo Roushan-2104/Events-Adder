@@ -1,14 +1,15 @@
 import styles from './EventList.module.css'
 
-export default function EventList({eventer,handleClick}) {
+export default function EventList({ events, handleClick }) {
     return (
-        <div className={styles.card_list}>
-            {eventer.map((todo,index) => (
-                <div className={styles.card} key={todo.id}>
-                    <h3>{index} - {todo.title}</h3>
-                    <button onClick={() => handleClick(todo.id)}>Delete Event</button>
-                </div>
-            ))}
-        </div>
+      <div className={styles.card_list}>
+        {events.map((event, index) => (
+          <div className={styles.card} key={event.id}>
+            <h2>{index} - {event.title}</h2>
+            <button onClick={() => handleClick(event.id)}>Delete event</button>
+          </div>
+        ))}
+      </div>
     )
+
 }

@@ -11,9 +11,10 @@ function App() {
   const [events, setEvents] = useState([])
   
   const addEvent = (event) => {
-    setEvents((prevEvents) => {
-      return[...prevEvents, events]
+    setEvents(prevEvents => {
+      return [...prevEvents, event]  
     })
+    setShowModal(false)
   }
 
   const handleClick = (id) =>{
@@ -24,9 +25,6 @@ function App() {
     })
   }
 
-  const handleClose = () => {
-    setShowModal(false)
-  }
 
   const subtitle = "All the latest events in Marioland"
 
@@ -44,10 +42,11 @@ function App() {
           <button onClick={()=> setShowEvents(true)}>Show Events</button>
         </div>
       )}
-      {showEvents && <EventList eventer={events} handleClick={handleClick}/>}
+
+      {showEvents && <EventList events={events} handleClick={handleClick}/>}
 
       {showModal && 
-      <Modal handleClose={handleClose} isSalesModal={true}>
+      <Modal isSalesModal={true}>
         <Form addEvent={addEvent} />
       </Modal>
       }

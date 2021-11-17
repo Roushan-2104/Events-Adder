@@ -8,11 +8,11 @@
     border: 1px solid #eee;
     box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
     padding: 15px;
-    max-width: 400px;
+    width: 24%;
     margin: 22px 20px;
     border-color: #000;
     border-radius: 8px;
 }
 .card button{
-    background-color: #555;
+    background-color: rgb(65, 48, 48);
 }
