@@ -16,3 +16,9 @@
 .card button{
     background-color: rgb(65, 48, 48);
 }
+
+@media(max-width:765px){
+    .card{
+        width: 75%;
+    }
+}
